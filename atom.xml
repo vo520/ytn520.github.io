@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ytn520-github-io.vercel.app</id>
+    <title>Gridea</title>
+    <updated>2022-08-05T16:03:20.677Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ytn520-github-io.vercel.app"/>
+    <link rel="self" href="https://ytn520-github-io.vercel.app/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://ytn520-github-io.vercel.app/images/avatar.png</logo>
+    <icon>https://ytn520-github-io.vercel.app/favicon.ico</icon>
+    <rights>All rights reserved 2022, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[ES6]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/es6/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/es6/">
+        </link>
+        <updated>2022-07-29T16:01:22.000Z</updated>
+        <content type="html"><![CDATA[<p>var<br>
+1.声明提升             -&gt;先上车后买票<br>
+2.变量覆盖            -&gt;套牌车<br>
+3.没有块级作用域   -&gt;红杏出墙</p>
+<p>const<br>
+1.声明后必须赋值<br>
+2.定义的值不能修改<br>
+3.支持let的其它属性</p>
+<p>解构<br>
+let a = 1<br>
+let b = 2<br>
+[a,b] = [b,a]<br>
+console.log(2,1)</p>
+<p>解构快速去重<br>
+let arr = [12,12,10,8,9,7]<br>
+let item = [...new Set(arr)]</p>
+<p>构造函数同步执行-&gt; .then() 异步</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vs code添加vue代码片段]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/vs-code-tian-jia-vue-dai-ma-pian-duan/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/vs-code-tian-jia-vue-dai-ma-pian-duan/">
+        </link>
+        <updated>2022-07-25T07:50:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>vue2<br>
+{<br>
+&quot;Print to console&quot;: {<br>
+&quot;prefix&quot;: &quot;vue2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;<template>&quot;,<br>
+&quot;    <div>\n&quot;,<br>
+&quot;    </div>&quot;,<br>
+&quot;</template>\n&quot;,<br>
+&quot;<script>&quot;,<br>
+&quot;export default {&quot;,<br>
+&quot;    data() {&quot;,<br>
+&quot;        return {\n&quot;,<br>
+&quot;        };&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    created() {\n&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    mounted() {\n&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    methods: {\n&quot;,<br>
+&quot;    }&quot;,<br>
+&quot;};&quot;,<br>
+&quot;</script>\n&quot;,<br>
+&quot;&lt;style scoped lang=&quot;${1:scss}&quot;&gt;\n&quot;,<br>
+&quot;</style>\n&quot;<br>
+],<br>
+&quot;description&quot;: &quot;Create vue template&quot;<br>
+}<br>
+}</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>vue2<br>
+{<br>
+&quot;Print to console&quot;: {<br>
+&quot;prefix&quot;: &quot;vue2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;<template>&quot;,<br>
+&quot;    <div>\n&quot;,<br>
+&quot;    </div>&quot;,<br>
+&quot;</template>\n&quot;,<br>
+&quot;<script>&quot;,<br>
+&quot;export default {&quot;,<br>
+&quot;    data() {&quot;,<br>
+&quot;        return {\n&quot;,<br>
+&quot;        };&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    created() {\n&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    mounted() {\n&quot;,<br>
+&quot;    },&quot;,<br>
+&quot;    methods: {\n&quot;,<br>
+&quot;    }&quot;,<br>
+&quot;};&quot;,<br>
+&quot;</script>\n&quot;,<br>
+&quot;&lt;style scoped lang=&quot;${1:scss}&quot;&gt;\n&quot;,<br>
+&quot;</style>\n&quot;<br>
+],<br>
+&quot;description&quot;: &quot;Create vue template&quot;<br>
+}<br>
+}</p>
+<!-- more -->
+<p>vue3<br>
+{<br>
+&quot;Print to console&quot;: {<br>
+&quot;prefix&quot;: &quot;vue3&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;<template>&quot;,<br>
+&quot;  <div></div>&quot;,<br>
+&quot;</template>&quot;,<br>
+&quot;&quot;,<br>
+&quot;<script>&quot;,<br>
+&quot;import { reactive, toRefs, onBeforeMount, onMounted } from 'vue'&quot;,<br>
+&quot;export default {&quot;,<br>
+&quot;  name: '',&quot;,<br>
+&quot;  setup() {&quot;,<br>
+&quot;    console.log('1-开始创建组件-setup')&quot;,<br>
+&quot;    const data = reactive({})&quot;,<br>
+&quot;    onBeforeMount(() =&gt; {&quot;,<br>
+&quot;      console.log('2.组件挂载页面之前执行----onBeforeMount')&quot;,<br>
+&quot;    })&quot;,<br>
+&quot;    onMounted(() =&gt; {&quot;,<br>
+&quot;      console.log('3.-组件挂载到页面之后执行-------onMounted')&quot;,<br>
+&quot;    })&quot;,<br>
+&quot;    return {&quot;,<br>
+&quot;      ...toRefs(data),&quot;,<br>
+&quot;    }&quot;,<br>
+&quot;  },&quot;,<br>
+&quot;}&quot;,<br>
+&quot;&quot;,<br>
+&quot;</script>&quot;,<br>
+&quot;<style scoped lang='scss'>&quot;,<br>
+&quot;</style>&quot;<br>
+],<br>
+&quot;description&quot;: &quot;Log output to console&quot;<br>
+}<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[axios vue 自己封装]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/axios-vue-zi-ji-feng-zhuang/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/axios-vue-zi-ji-feng-zhuang/">
+        </link>
+        <updated>2022-07-21T16:41:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>utils request.js         文档(https://www.kancloud.cn/liweiliang/axios/1328148)</p>
+<p>import axios from &quot;axios&quot;;  //引入axios<br>
+// 创建实例<br>
+let instance = axios.create({<br>
+baseURL: &quot;http://127.0.0.1:3000/&quot;,  // api接口地址<br>
+timeout: 30000,                            // 延时时间<br>
+});</p>
+<p>// get 方法<br>
+export let $get = async (url, data) =&gt; {<br>
+return ({ data } = await instance.get(url, { params: data }));<br>
+};<br>
+// post 方法<br>
+export let $post = async (url, data) =&gt; {<br>
+return ({ data } = await instance.post(url, data));<br>
+};</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>utils request.js         文档(https://www.kancloud.cn/liweiliang/axios/1328148)</p>
+<p>import axios from &quot;axios&quot;;  //引入axios<br>
+// 创建实例<br>
+let instance = axios.create({<br>
+baseURL: &quot;http://127.0.0.1:3000/&quot;,  // api接口地址<br>
+timeout: 30000,                            // 延时时间<br>
+});</p>
+<p>// get 方法<br>
+export let $get = async (url, data) =&gt; {<br>
+return ({ data } = await instance.get(url, { params: data }));<br>
+};<br>
+// post 方法<br>
+export let $post = async (url, data) =&gt; {<br>
+return ({ data } = await instance.post(url, data));<br>
+};</p>
+<!-- more -->
+<p>api  user.js<br>
+import { $post } from &quot;../utils/request&quot;;<br>
+// 登录方法<br>
+export let $login = async (url, params) =&gt; {<br>
+let res = await $post(url, params);<br>
+return res;<br>
+};</p>
+<!-- more -->
+<p>使用:<br>
+const FN = async (values) =&gt; {<br>
+let res = await $login(&quot;users/login&quot;, values);<br>
+console.log(res.data);<br>
+};</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Node.js express 跨域问题]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/nodejs-express-kua-yu-wen-ti/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/nodejs-express-kua-yu-wen-ti/">
+        </link>
+        <updated>2022-07-19T07:30:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>第一种，使用cors插件<br>
+1.先安装cors插件 npm install cors --save<br>
+2.在express项目下app.js中引入并使用</p>
+<p>// app.js<br>
+// 引入跨域插件<br>
+const cors = require('cors');<br>
+// 解决跨域<br>
+app.use(cors());</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>第一种，使用cors插件<br>
+1.先安装cors插件 npm install cors --save<br>
+2.在express项目下app.js中引入并使用</p>
+<p>// app.js<br>
+// 引入跨域插件<br>
+const cors = require('cors');<br>
+// 解决跨域<br>
+app.use(cors());</p>
+<!-- more -->
+<p>第二种，直接通过express中的api进行设置<br>
+// app.js<br>
+app.all('<em>',function (req, res, next) {<br>
+res.header('Access-Control-Allow-Origin', '</em>');<br>
+res.header('Access-Control-Allow-Headers', '*');<br>
+res.header('Content-Type', 'application/json;charset=utf-8');<br>
+res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');<br>
+next();<br>
+});<br>
+###代码必须要添加在注册路由代码之前</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[测试]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/ceshi/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/ceshi/">
+        </link>
+        <updated>2022-07-17T10:12:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>测试测试测试.....😃</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>测试测试测试.....😃</p>
+<!-- more -->
+<!-- more -->
+<p>6666</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://ytn520-github-io.vercel.app/post/hello-gridea/</id>
+        <link href="https://ytn520-github-io.vercel.app/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
